@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hoosier Lottery</h1>
+
+    <h2 class="LottoFor"></h2>
+
+    <h2 class="LottoWhile"></h2>
+
+    <script>
+        let LottoStrFor;
+
+        let lottoStr = "";
+
+        let answerToLottoFor = document.querySelector(".LottoFor");
+
+        let lotto;
+
+        let answerToLottoWhile = document.querySelector(".LottoWhile");
+
+        for (let num = 0; num < 6; num++) {
+
+            lotto = Math.floor(Math.random() * 50);
+
+            lottoStr += " " + lotto.toString() + (num < 5 ? " -" : "");
+
+        }
+
+        console.log(lottoStr);
+
+        answerToLottoFor.textContent = lottoStr;
+
+        let number = 0;
+
+        lottoStr = "";
+
+        while (number < 6) {
+
+            lotto = Math.floor(Math.random() * 49) + 1;
+
+            lottoStr += " " + lotto.toString() + (number < 5 ? " -" : "");
+
+            number++;
+
+        }
+
+        console.log(lottoStr);
+
+        answerToLottoWhile.textContent = lottoStr;
+
+    </script>
+    
+</body>
+
+</html>
